@@ -1,0 +1,5 @@
+- ArrayList digunakan untuk mengakses cepat elemen berdasarkan indexnya.
+- Linkedlist digunakan untuk melakukan operasi tambah hapus di awal atau ditengah list. 
+	untuk akses berdasarkan index lebih lambat dari pada arraylist. intinya dapat ubah2 isi elemen secara flexible.
+- HashMap / Map digunakan untuk key dan value, jadi mudah untuk mencari value berdasarkan key nya
+- TreeSet digunakan untuk membuat collection yang langsung terurut.
