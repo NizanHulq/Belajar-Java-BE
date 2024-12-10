@@ -1,0 +1,37 @@
+Checked Exception adalah excception yang diperiksa saat compile time. Menggunakan Try and catch atau throw.
+Checked Exception dibutuhkan untuk digunakan karena membutuhkan penanganan langsung ketika exception terjadi 
+sehingga perlu di handle.
+Macam macam checked Exception :
+ - SQLException digunakan untuk handling exception ketika melakukan operasi database
+ - IO Exception digunakan untuk handling exception ketika ingin membaca file 
+ - FileNotFound Ex merupakan subclass dari IO Ex yang digunakan untuk handling ketika file tidak ditemukan.
+ - Parse Ex digunakan ketika gagal dalam parsing string ke format tertentu seperti date
+ - URISyntax Ex digunakana ketika string URI yang diberikan tidak valid
+ - 
+ 
+ Unchecked ex atau runtime ex adalah exception yang diakibatkan kesalahan logika pemrograman.
+ Tidak wajib di handle karena cukup dengan memperbaiki logika program dan tidak perlu menangani efek error nya.
+ 
+ 
+ Handling exception menggunakan try catch, final(opsional) dan mungkin karena banyak jenis exception di java
+ sehingga kita bisa handling lebih dari satu catch atau exception.
+ 
+ Finally itu digunakan atau akan dijalankan selalu setelah try catch berlangsung. biasa nya digunakan semisal
+ untuk menutup file kembali atau menutup koneksi daatabase.
+ 
+ Kita juga dapat membuat custom exception sendiri sering digunakan dalam pengembangan backend karena dapat 
+ kita sesuaikan dengan kebutuhan bisnis atau sistem atau kebutuhan yang lebih spesifi speperti userNotFound dll.
+ 
+ Kita bisa menggunakan try with resources untuk mengganti finally dalam menutup sumber daya.
+ 
+ Ex. 
+ public class TryWithResourcesExample {
+    public static void main(String[] args) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("file.txt"))) {
+            System.out.println(reader.readLine());
+        } catch (IOException e) {
+            System.out.println("Kesalahan I/O: " + e.getMessage());
+        }
+    }
+}
+  
